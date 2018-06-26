@@ -12,7 +12,7 @@
 <br>
 -delete post
 <br>
-mongoDB
+-mongoDB
 
 <b>ToDo:</b>
 <br>
