@@ -1,5 +1,7 @@
 # BulletinBoard
 
+<b>0.1</b>
+<br>
 <b>Done:</b>
 <br>
 -Reading posts 
