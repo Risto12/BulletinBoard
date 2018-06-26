@@ -12,6 +12,6 @@
 
 <b>ToDo:</b>
 <br>
--reate post
+-create post
 <br>
 -authentication
