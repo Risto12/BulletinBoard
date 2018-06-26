@@ -1,0 +1,11 @@
+--insert one--
+db.posts.insertOne({"subject":"test1","sender":"julia","date":"20.1.1999","color":"green","text":"test3"})
+--insert many--
+db.posts.insertMany([
+    {"subject":"test1","sender":"julia","date":"20.1.1999","color":"green","text":"test3"},
+    {"subject":"test2","sender":"julia","date":"20.1.1999","color":"green","text":"test3"},
+    {"subject":"test3","sender":"julia","date":"20.1.1999","color":"green","text":"test3"},
+    {"subject":"test4","sender":"julia","date":"20.1.1999","color":"green","text":"test3"},
+    {"subject":"test5","sender":"julia","date":"20.1.1999","color":"green","text":"test3"},
+    {"subject":"test6","sender":"julia","date":"20.1.1999","color":"green","text":"test3"},
+])
