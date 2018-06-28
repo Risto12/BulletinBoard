@@ -12,10 +12,13 @@
 <br>
 -delete post
 <br>
+-insert post
+<br>
 -mongoDB
+
 
 <b>ToDo:</b>
 <br>
--create post
+-Styling form
 <br>
 -authentication
