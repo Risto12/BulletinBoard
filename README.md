@@ -4,7 +4,7 @@
 <br>
 <b>Done:</b>
 <br>
--Reading posts 
+-reading posts 
 <br>
 -API endpoints 
 <br>
