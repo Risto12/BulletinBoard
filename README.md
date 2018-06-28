@@ -19,6 +19,6 @@
 
 <b>ToDo:</b>
 <br>
--Styling form
+-styling form
 <br>
 -authentication
