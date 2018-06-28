@@ -9,29 +9,29 @@ import Read from "../Comp/headRead"
 import {allF,removeF} from "../fetch/fetch.js"
 import SendForm from './form/form.js'
 
+
 class App extends Component {
   
   constructor(props){
     super(props)
     this.state = {
       files:[],
-      id:"203",
+      id:"",
       read:true,
       log:{
         key:"",
         log:true,
         proj:"",
         status:"Fail"
-      },
-      form:{
-        text1:"test"
       }
+     
     }
   }
   
   componentDidMount(){
     this.getAll()
-   }
+   
+  }
 
   getAll = () => {
     
@@ -185,10 +185,10 @@ class App extends Component {
       </div> 
     : <div style={style.inf}>
         <div style={style.leftBox}>
-          <File getId={this.getFileId} files={this.state.files}/>
+          <File getId={this.getFileId} files={this.state.files} removeId={this.removeOne} refresh={this.getAll}/>
         </div>
         <div style={style.rightBox}>
-          <SendForm change={this.formChange} state={this.state.form.text1}/>
+          <SendForm change={this.formChange} refresh={this.getAll}/>
         </div>
       </div>     
 

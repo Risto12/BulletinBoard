@@ -74,7 +74,25 @@ router.post("/add",(req,res) =>{
     
  })
 
-
+ router.post("/insertOne",(req,res) =>{
+    
+   
+    
+    mongo.insertOne({
+        subject:req.body.subject,
+        sender:req.body.sender,
+        text:req.body.text
+    })
+    .then((result)=>{
+        res.send(result + "").status(200)
+    },(err)=>{
+        res.send("fail").status(500)
+    })
+   
+    
+    
+    
+ })
 
 
 module.exports = router

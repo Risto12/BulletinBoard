@@ -1,38 +1,73 @@
-import React from 'react'
+import React, {PureComponent} from 'react'
+import Input from './inputs/input.js'
+import {addF} from '../../fetch/fetch.js'
 
-const form = (props) => {
 
-const style = {
-    center:{ 
-        display: "flex",
-        justifyContent: "center",
-        marginTop: "10vh"
-    },
-    input:{
-        color:"red"
-    },
-    button:{
-        marginTop:"2vh",
+class Form extends PureComponent {
+
+    constructor(props){
+        super(props)
+        this.state = {
+            subject:{
+                
+                value:"Subject"
+            },
+            sender:{
+                
+                value:"Sender"
+            },
+            text:{
+                
+                value:"Message"
+            }
+        }
+    }
+
+    change = (e,target) => {
+       
+       const obj = {}
+       obj[target] = {value:e.target.value}
+       this.setState(obj)
+       
+    }
+
+    send = (e) => {
+        e.preventDefault()
+        addF(this.state)
+        .then((result)=>{
+            
+            this.props.refresh()
+        })
+    }
+
+    render(){
         
+        const style = {
+            width:"100%",
+            
+            padding: "10px",
+            boxSizing:"border-box",
+            
+            
+        }
+        
+        return(
+            <div style={style}>
+                <form>
+                    <Input type={"input"} value={this.state.subject.value} change={this.change} target={"subject"}/>
+                    <Input type={"input"} value={this.state.sender.value} change={this.change} target={"sender"} />
+                    <Input type={"textArea"} value={this.state.text.value} change={this.change} target={"text"} />
+                    <button type={"submit"} onClick={(e)=>{this.send(e)}}>Send</button>
+                </form>
+            </div>
+        )
     }
 
 
-}
-
-
-return (
-    <div style={style.center}>
-        <form onSubmit={(event)=>{}}>
-              <label>Name</label>
-              <input style={style.input} type="text" value={props.state} onChange={(event)=>{props.change(event)}}/>
-              <br/>
-              <input style={style.button} type="submit" value="Submit"/>
-      </form>
-      
-    </div>
-)
-
 
 }
 
-export default form
+
+
+
+export default Form

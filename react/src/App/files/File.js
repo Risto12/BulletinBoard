@@ -17,8 +17,6 @@ class File extends PureComponent {
 
     componentWillReceiveProps(nextProps){
       
-      
-     
       this.setState({files:nextProps.files})
       
     }

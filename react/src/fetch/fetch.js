@@ -88,3 +88,32 @@ export function modifyF(param){
     })
 
 }
+
+export function addF(param){
+
+    return new Promise((resolve,reject) => {
+            
+            fetch(`${url}/posts/insertOne`,
+            {method:"POST",
+             body: JSON.stringify({
+                subject:param.subject.value, 
+                sender:param.sender.value,
+                text:param.text.value
+                }),
+             headers:{
+                 "content-type":"application/json"
+             }})
+             .then((result)=>{
+                resolve(result.text())
+             },
+             (rej) => {
+                reject(rej)
+             })
+             .catch((err)=>{
+                 console.log(err)
+             })
+             
+
+    })
+
+}

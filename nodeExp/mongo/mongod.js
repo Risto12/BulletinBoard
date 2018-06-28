@@ -156,6 +156,40 @@ function deleteOne(data){
     })
 }
 
+function insertOne(data){
+    return new Promise((resolve,reject)=>{ 
+        
+        mongo.connect(url,(err,db) =>{
+         
+             if(err){
+                 
+                 reject("Database error")
+                 return
+             }
+             
+             const dbo = db.db(dbName)
+         
+             dbo.collection("posts").insert({
+                 subject:data.subject,
+                 sender:data.sender,
+                 date:"20.1.1999",
+                 color:"yellow",
+                 text:data.text
+            }, 
+            
+                function(err, res) {
+                if(err){
+                 
+                    reject("Database error")
+                    return
+                }
+                resolve(res.deletedCount);
+                db.close()
+             });
+         
+         })
+     })
+ }
 
 
 
@@ -165,6 +199,7 @@ module.exports = {
     add:add,
     findAll:findAll,
     updateOne:updateOne,
-    deleteOne:deleteOne
+    deleteOne:deleteOne,
+    insertOne:insertOne
 
 }
