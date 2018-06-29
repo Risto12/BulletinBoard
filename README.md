@@ -38,8 +38,8 @@ Test project to practise React development and Nodejs.
 <br>
 Bulletin board is made with React front and Nodejs backend.
 Mongodb is required to store data.
-
-
+<br>
+<img src="beta.png" alt="Beta">
 
 
 
