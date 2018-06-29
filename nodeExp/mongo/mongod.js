@@ -158,7 +158,7 @@ function deleteOne(data){
 
 function insertOne(data){
     const date = new Date()
-    const getDate = `${date.getDay()}.${date.getMonth()}.${date.getFullYear()}`
+    const getDate = `${date.getDate()}.${date.getMonth()+1}.${date.getFullYear()}`
     
     return new Promise((resolve,reject)=>{ 
         
