@@ -1,5 +1,5 @@
 
-const url = "http://127.0.0.1:8070"
+const url = "http://localhost:8070"
 
 
 export function allF(){
@@ -7,10 +7,10 @@ export function allF(){
   return new Promise((resolve,reject) => {
     
         fetch(`${url}/posts/all`,{
-        method:"get",
-        headers:{
-            "Content-Type": "application/json"
-        }
+            method:"get",
+            headers:{
+                "Content-Type": "application/json"
+            }
         })
         .then((result)=>{
             return result.json()
@@ -42,11 +42,13 @@ export function removeF(param){
        
 
         fetch(`${url}/posts/removeOne`,
-            {method:"POST",
-             body: JSON.stringify({id:param}),
-             headers:{
-                 "content-type":"application/json"
-             }})
+            {
+                method:"POST",
+                body: JSON.stringify({id:param}),
+                headers:{
+                    "content-type":"application/json"
+                }
+            })
              .then((result)=>{
                 resolve(result.text())
              },
@@ -69,11 +71,13 @@ export function modifyF(param){
        
 
         fetch(`${url}/posts/updateOne`,
-            {method:"POST",
-             body: JSON.stringify({id:param.id,color:param.color}),
-             headers:{
-                 "content-type":"application/json"
-             }})
+            {
+                method:"POST",
+                body: JSON.stringify({id:param.id,color:param.color}),
+                headers:{
+                    "content-type":"application/json"
+                }
+            })
              .then((result)=>{
                 resolve(result.text())
              },
@@ -94,15 +98,17 @@ export function addF(param){
     return new Promise((resolve,reject) => {
             
             fetch(`${url}/posts/insertOne`,
-            {method:"POST",
-             body: JSON.stringify({
-                subject:param.subject.value, 
-                sender:param.sender.value,
-                text:param.text.value
+            {
+                method:"POST",
+                body: JSON.stringify({
+                    subject:param.subject.value, 
+                    sender:param.sender.value,
+                    text:param.text.value
                 }),
-             headers:{
-                 "content-type":"application/json"
-             }})
+                headers:{
+                    "content-type":"application/json"
+                 }
+            })
              .then((result)=>{
                 resolve(result.text())
              },

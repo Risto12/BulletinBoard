@@ -157,6 +157,9 @@ function deleteOne(data){
 }
 
 function insertOne(data){
+    const date = new Date()
+    const getDate = `${date.getDay()}.${date.getMonth()}.${date.getFullYear()}`
+    
     return new Promise((resolve,reject)=>{ 
         
         mongo.connect(url,(err,db) =>{
@@ -172,7 +175,7 @@ function insertOne(data){
              dbo.collection("posts").insert({
                  subject:data.subject,
                  sender:data.sender,
-                 date:"20.1.1999",
+                 date:getDate,
                  color:"yellow",
                  text:data.text
             }, 

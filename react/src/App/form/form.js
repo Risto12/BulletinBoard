@@ -43,16 +43,22 @@ class Form extends PureComponent {
     render(){
         
         const style = {
+            box:{
             width:"100%",
-            
-            padding: "10px",
-            boxSizing:"border-box",
+            padding: "10px 20px",
+            },
+            head:{
+                marginBottom:"10%",
+                textAlign:"center"
+                
+            }
             
             
         }
         
         return(
-            <div style={style}>
+            <div style={style.box}>
+                <h1 style={style.head}>Insert new post</h1>
                 <form>
                     <Input type={"input"} value={this.state.subject.value} change={this.change} target={"subject"}/>
                     <Input type={"input"} value={this.state.sender.value} change={this.change} target={"sender"} />

@@ -21,6 +21,7 @@ const input = (props) => {
         style.padding = "1px 15px"
         style.height = "120px"
         style.width = "80%"
+        style.resize = "none"
 
         inp = <textarea style={style} value={props.value} onChange={(e)=>{props.change(e,props.target)}}/>
         break;
@@ -38,7 +39,6 @@ const input = (props) => {
 
     return (
         <div>
-            
             {inp}
        </div>
     )

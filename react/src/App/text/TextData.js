@@ -61,9 +61,9 @@ class TextData extends PureComponent{
 
         const data = this.state[this.props.id] === undefined 
         ? <Typography variant="subheading">No messages</Typography> 
-        : <Aux><Typography variant="subheading" style={style.main}><b>Aihe:</b>{this.state[this.props.id].subject}</Typography>
-        <Typography variant="subheading" style={style.main}><b>Lähettäjä:</b>{this.state[this.props.id].sender}</Typography>
-        <Typography variant="subheading" style={style.main}><b>Päivämäärä:</b>{this.state[this.props.id].date}</Typography>
+        : <Aux><Typography variant="subheading" style={style.main}><b>Subject:</b>{this.state[this.props.id].subject}</Typography>
+        <Typography variant="subheading" style={style.main}><b>Sender:</b>{this.state[this.props.id].sender}</Typography>
+        <Typography variant="subheading" style={style.main}><b>Date:</b>{this.state[this.props.id].date}</Typography>
         <Typography variant="subheading" style={style.text}> {this.state[this.props.id].text}</Typography>
         </Aux>
 
