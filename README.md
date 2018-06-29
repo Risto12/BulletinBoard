@@ -25,6 +25,7 @@
 <br>
 -authentication
 <br>
+<br>
 <b>What this app is:</b>
 <br>
 Test project to practise React development and Nodejs
