@@ -5,6 +5,7 @@
 <b>0.1.0.0</b>
 <br>
 <br>
+
 <b>Done:</b>
 <br>
 -reading posts 
@@ -20,11 +21,15 @@
 -mongoDB
 <br>
 <br>
+
 <b>ToDo:</b>
 <br>
 -styling form
 <br>
 -authentication
+<br>
+-Scaling for mobile
+
 <br>
 <br>
 <b>What this app is:</b>
