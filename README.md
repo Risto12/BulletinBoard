@@ -1,10 +1,10 @@
 # BulletinBoard
 
-<b>0.1</b>
+<b>0.1.0.0</b>
 <br>
 <b>Done:</b>
 <br>
--Reading posts 
+-reading posts 
 <br>
 -API endpoints 
 <br>
@@ -12,10 +12,13 @@
 <br>
 -delete post
 <br>
+-insert post
+<br>
 -mongoDB
+
 
 <b>ToDo:</b>
 <br>
--create post
+-styling form
 <br>
 -authentication
