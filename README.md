@@ -29,7 +29,7 @@
 <br>
 <b>What this app is:</b>
 <br>
-Test project to practise React development and Nodejs
+Test project to practise React development and Nodejs.
 <br>
 Bulletin board is made with React front and Nodejs backend.
 Mongodb is required to store data.
