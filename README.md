@@ -1,7 +1,7 @@
 # BulletinBoard
 
 
-<h2> Status: <h2>
+<h2> Status: </h2>
 <b>0.1.0.0</b>
 <br>
 <b>Done:</b>
