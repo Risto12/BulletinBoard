@@ -1,7 +1,7 @@
 # BulletinBoard
 
 <H3>Updated: 07.11.2018 <H3>
-<h2> Status: Failing/h2>
+<h2> Status: Failing</h2>
 <b>0.1.0.0</b>
 <br>
 <br>
